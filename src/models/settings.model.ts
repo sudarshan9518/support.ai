@@ -1,0 +1,49 @@
+import mongoose,{ Schema ,model} from "mongoose";
+
+
+interface ISettings{
+      ownerId : string
+      businessName :string
+      supportEmail:string
+      knowledge: string
+
+}
+
+
+
+
+const settingsSchema = new Schema<ISettings>({
+   
+
+    ownerId:{
+        type:String,
+        required:true,
+        unique:true
+        
+    },
+    businessName:{
+        type:String,
+
+    },
+    supportEmail:{
+        type:String,
+
+    },
+    knowledge:{
+        type:String,
+
+    },
+
+
+},{
+    timestamps:true
+})
+
+
+
+const Settings = mongoose.models.settings || model("settings", settingsSchema)
+
+
+
+
+export default Settings
