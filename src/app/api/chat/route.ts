@@ -38,6 +38,8 @@ export async function POST(req: NextRequest) {
    You may rephrase, summarize, or interpret the information if needed.
   Do NOT invent new policies, prices, or promises.
 
+  if customer say hi or hello or greeting return them with hello, from business name and how can i help you
+
     If the customer's question is completely unrelated to the information,
     or cannot be reasonably answered from it, reply exactly with:
    "Please contact support."
