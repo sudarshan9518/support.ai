@@ -1,10 +1,18 @@
-SCALEKIT_CLIENT_SECRET=
-SCALEKIT_CLIENT_ID=
-SCALEKIT_ENVIRONMENT_URL=
-MONGO_DB =
-Next_public_app_url=
-GEMINI_API_KEY=
+               SCALEKIT_CLIENT_SECRET=
 
+              SCALEKIT_CLIENT_ID=
+
+               SCALEKIT_ENVIRONMENT_URL=
+
+               MONGO_DB =
+
+               Next_public_app_url=
+               
+               GEMINI_API_KEY=
+
+
+
+                   https://app.scalekit.com/ws/environments/env_112229425361191949/authentication/sessions
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
