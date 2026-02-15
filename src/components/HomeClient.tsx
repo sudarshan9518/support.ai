@@ -6,17 +6,25 @@ import { useRouter } from "next/navigation";
 
 
 const HomeClient = ({ email }: { email: string }) => {
+
+  const [loading, setloading]= useState(false)
+
   const handLogin = () => {// 1st way
+    setloading(true)
     window.location.href = "/api/auth/login";
   };
 
   const firstLetter = email? email[0]?.toUpperCase() :""
 
   const [open, setOpen] = useState(false);
+
+
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // 👇 Close when clicking outside
   useEffect(() => {
+
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
@@ -109,8 +117,9 @@ const HomeClient = ({ email }: { email: string }) => {
               className="px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-zinc-800 transition disabled:opacity-60
         flex items-center gap-2"
               onClick={handLogin}
+              disabled={loading}
             >
-              Login
+              {loading ?"Loading..." :"Login"}
             </button>
           )}
         </div>

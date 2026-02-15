@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req:NextRequest) {
     const {searchParams} = new URL(req.url)
     const code = searchParams.get("code")
-      const redirectUri = `${process.env.Next_public_app_url}/api/auth/callback`
+      const redirectUri = `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/callback`
 
     if(!code){
         return NextResponse.json({
@@ -16,7 +16,7 @@ export async function GET(req:NextRequest) {
     const session = await scalekit.authenticateWithCode(code, redirectUri )
   console.log(session);
   
-    const response = NextResponse.redirect(`${process.env.Next_public_app_url}`)
+    const response = NextResponse.redirect(`${process.env.NEXT_PUBLIC_APP_URL}`)
 
     response.cookies.set("accessToken",  session.accessToken, {
         httpOnly:true,

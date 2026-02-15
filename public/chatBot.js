@@ -122,6 +122,15 @@
   const messageArea = document.querySelector("#chat-messages")
 
 
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); 
+    sendBtn.click(); // trigger button click
+  }
+});
+
+
+
 
   function addMessage(text,from){
     const bubble = document.createElement("div")
@@ -181,7 +190,7 @@
     addMessage(data ||"something went wrong", "ai")
     
   } catch (error) {
-    console.log(error);
+    console.log();
     
     messageArea.removeChild(typing)
     addMessage(data || "something went wrong", "ai")
