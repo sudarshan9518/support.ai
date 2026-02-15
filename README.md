@@ -14,6 +14,8 @@
 
                    https://app.scalekit.com/ws/environments/env_112229425361191949/authentication/sessions
 
+                   https://vercel.com/sudarshans-projects-c50f9817/support-ai/deployments
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
