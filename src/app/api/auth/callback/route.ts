@@ -21,7 +21,7 @@ export async function GET(req:NextRequest) {
     response.cookies.set("accessToken",  session.accessToken, {
         httpOnly:true,
         maxAge:24*60*60,
-        secure:false,
+        secure:true, // change for production
         path:"/"
     })
 
